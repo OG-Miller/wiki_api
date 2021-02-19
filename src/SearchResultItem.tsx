@@ -3,7 +3,6 @@ import './searchResultItem.css';
 
 interface Props {
 	title: String;
-	key: number;
 	pageid: number;
 }
 
