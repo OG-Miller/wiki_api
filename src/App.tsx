@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import SearchResultItem from './SearchResultItem';
 import Article from './Article';
 import { createNoSubstitutionTemplateLiteral } from 'typescript';
@@ -42,7 +42,7 @@ const App: React.FC = () => {
 		console.log(searchData);
 	};
 
-	const handleSearchClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void = e => {
+	const handleSearch: (e: React.FormEvent<HTMLFormElement>) => void = e => {
 		e.preventDefault();
 		getSearchData();
 	};
@@ -65,10 +65,10 @@ const App: React.FC = () => {
 
 	return (
 		<div className='App'>
-			<div className='searchBar'>
+			<form className='searchBar' onSubmit={e => handleSearch(e)}>
 				<input onChange={e => setSearchQuery(e.target.value)} />
-				<button onClick={handleSearchClick}>search</button>
-			</div>
+				<button>search</button>
+			</form>
 
 			{showSearchResults === true
 				? infoFromSearch.map(item => (

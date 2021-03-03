@@ -1,19 +1,19 @@
 .App {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 40px;
 }
-.searchBar {
-	display: flex;
-	align-self: center;
 
-	flex-direction: row;
-	margin: 30px;
+.searchBar {
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  margin: 30px;
 }
 
 input {
-	border: solid 1px rgb(116, 117, 117);
-	border-radius: 2px;
-}
+  border: solid 1px #747575;
+  border-radius: 2px;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,25 @@
+$primaryBlue: rgb(31, 31, 125);
+@mixin centerAll {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.App {
+	@include centerAll();
+	background-color: $primaryBlue;
+	margin: 40px;
+}
+.searchBar {
+	display: flex;
+	align-self: center;
+
+	flex-direction: row;
+	margin: 30px;
+}
+
+input {
+	border: solid 1px rgb(116, 117, 117);
+	border-radius: 2px;
+}

@@ -1,6 +1,6 @@
 import { getByTitle } from '@testing-library/react';
 import React from 'react';
-import './article.css';
+import './article.scss';
 
 interface Props {
 	title: String | undefined;
