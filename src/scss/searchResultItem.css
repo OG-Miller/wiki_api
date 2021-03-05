@@ -1,0 +1,12 @@
+.searchResultItem {
+  background: linear-gradient(to bottom left rgba(192, 146, 28, 0.781), rgba(252, 249, 249, 0.187));
+  border-radius: 8px;
+  padding: 10px;
+  margin: auto;
+  margin: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50vw;
+  cursor: pointer;
+}/*# sourceMappingURL=searchResultItem.css.map */

@@ -1,5 +1,5 @@
 import React from 'react';
-import './searchResultItem.css';
+import '././scss/searchResultItem.scss';
 
 interface Props {
 	title: String | undefined;
@@ -10,7 +10,7 @@ const SearchResultItem: React.FC<Props> = ({ title, pageid }) => {
 	return (
 		<div className='searchResultItem'>
 			<h1>{title}</h1>
-			<p>{pageid}</p>
+			{/* <p>{pageid}</p> */}
 		</div>
 	);
 };

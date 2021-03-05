@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import logo from './logo.svg';
-import './App.scss';
+import '././scss/App.scss';
 import SearchResultItem from './SearchResultItem';
 import Article from './Article';
 import { createNoSubstitutionTemplateLiteral } from 'typescript';
@@ -45,6 +45,7 @@ const App: React.FC = () => {
 	const handleSearch: (e: React.FormEvent<HTMLFormElement>) => void = e => {
 		e.preventDefault();
 		getSearchData();
+		setSearchQuery('');
 	};
 
 	const getPageData = async (id: number) => {
@@ -66,7 +67,7 @@ const App: React.FC = () => {
 	return (
 		<div className='App'>
 			<form className='searchBar' onSubmit={e => handleSearch(e)}>
-				<input onChange={e => setSearchQuery(e.target.value)} />
+				<input value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
 				<button>search</button>
 			</form>
 

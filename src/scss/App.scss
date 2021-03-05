@@ -1,0 +1,43 @@
+@import './helpers/layout';
+html {
+	background: $gradient;
+}
+@mixin centerAll {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.App {
+	@include centerAll();
+	background-color: none;
+	margin: 40px;
+}
+
+.searchBar {
+	display: flex;
+	align-self: center;
+	flex-direction: row;
+	margin: 30px;
+}
+
+input {
+	border: solid 1px rgb(116, 117, 117);
+	border-radius: 2px;
+}
+
+button {
+	all: unset;
+	padding: 2px 5px;
+	margin-left: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	background-color: white;
+	border: 1px solid $mainGrey;
+	border-radius: 2px;
+	&:hover {
+		background-color: rgb(197, 196, 196);
+	}
+	cursor: pointer;
+}
