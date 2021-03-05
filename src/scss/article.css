@@ -1,15 +1,9 @@
 .article__wrapper {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  /* text-align: center;
-  align-items: center; */
-  background-color: white;
-  box-shadow: 1px 1px 10px 2px #e4e3e3;
+  background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.447), rgba(192, 239, 247, 0.783));
   border-radius: 8px;
   padding: 30px;
   padding-top: 20px;
-  margin: auto;
+  margin-bottom: 30px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -23,13 +17,16 @@
 }
 
 .extract {
+  color: #1e6b86;
   word-wrap: break-word;
+  overflow: scroll;
   font-family: Arial, Helvetica, sans-serif;
   -moz-column-count: 2;
        column-count: 2;
   -moz-column-gap: 25px;
        column-gap: 25px;
   text-align: left;
+  max-height: 500px;
 }
 @media (max-width: 700px) {
   .extract {

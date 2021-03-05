@@ -66,26 +66,28 @@ const App: React.FC = () => {
 
 	return (
 		<div className='App'>
-			<form className='searchBar' onSubmit={e => handleSearch(e)}>
-				<input value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
-				<button>search</button>
-			</form>
-
-			{showSearchResults === true
-				? infoFromSearch.map(item => (
-						<div
-							key={item.pageid}
-							onClick={(e: React.MouseEvent<HTMLDivElement>) =>
-								handleSearchResultClick(e, item.pageid)
-							}>
-							<SearchResultItem pageid={item.pageid} title={item.title} />
-						</div>
-				  ))
-				: null}
-
-			{infoFromPageData ? (
-				<Article title={infoFromPageData.title} extract={infoFromPageData.extract} />
-			) : null}
+			<div className='searchBar__wrapper'>
+				<form className='searchBar' onSubmit={e => handleSearch(e)}>
+					<input type='text' value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
+					<button className='searchBar__button'>search</button>
+				</form>
+			</div>
+			<div className='data'>
+				{showSearchResults === true
+					? infoFromSearch.map(item => (
+							<div
+								key={item.pageid}
+								onClick={(e: React.MouseEvent<HTMLDivElement>) =>
+									handleSearchResultClick(e, item.pageid)
+								}>
+								<SearchResultItem pageid={item.pageid} title={item.title} />
+							</div>
+					  ))
+					: null}
+				{infoFromPageData ? (
+					<Article title={infoFromPageData.title} extract={infoFromPageData.extract} />
+				) : null}
+			</div>
 		</div>
 	);
 };

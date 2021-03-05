@@ -1,12 +1,20 @@
 .searchResultItem {
-  background: linear-gradient(to bottom left rgba(192, 146, 28, 0.781), rgba(252, 249, 249, 0.187));
-  border-radius: 8px;
+  background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.447), rgba(192, 239, 247, 0.783));
+  overflow: hidden;
   padding: 10px;
-  margin: auto;
+  justify-self: center;
   margin: 20px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 50vw;
   cursor: pointer;
+  margin: 20px;
+  border-radius: 10px;
+}
+.searchResultItem:hover {
+  background: rgba(255, 255, 255, 0.452);
+}
+
+h1 {
+  color: #1e6b86;
 }/*# sourceMappingURL=searchResultItem.css.map */

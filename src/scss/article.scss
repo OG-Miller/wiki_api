@@ -1,16 +1,11 @@
 @import './helpers/layout';
 .article__wrapper {
-	/* display: flex;
-	flex-direction: column;
-	justify-content: center; */
-	/* text-align: center;
-	align-items: center; */
-	background-color: rgb(255, 255, 255);
-	box-shadow: $boxShadow;
+	@include glass;
+	// background: $glass;
 	border-radius: 8px;
 	padding: 30px;
 	padding-top: 20px;
-	margin: auto;
+	margin-bottom: 30px;
 	width: fit-content;
 	max-width: 800px;
 }
@@ -22,11 +17,15 @@
 }
 
 .extract {
+	color: $deepBlue;
 	word-wrap: break-word;
+	overflow: scroll;
+
 	font-family: Arial, Helvetica, sans-serif;
 	column-count: 2;
 	column-gap: 25px;
 	text-align: left;
+	max-height: 500px;
 	@media (max-width: 700px) {
 		column-count: 1;
 	}
