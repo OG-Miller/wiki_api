@@ -4,7 +4,6 @@ import logo from './logo.svg';
 import '././scss/App.scss';
 import SearchResultItem from './SearchResultItem';
 import Article from './Article';
-import { createNoSubstitutionTemplateLiteral } from 'typescript';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 interface dataObj {
@@ -26,9 +25,18 @@ const App: React.FC = () => {
 	const [showSearchResults, setShowSearchResults] = useState<boolean>(true);
 	const [searchQuery, setSearchQuery] = useState('');
 
+	// check if previous data is in local storage then set state to that data
 	useEffect(() => {
-		console.log(infoFromPageData?.title);
-	}, [infoFromPageData]);
+		const data = localStorage.getItem('search-results');
+		if (data) {
+			setInfoFromSearch(JSON.parse(data));
+		}
+	}, []);
+
+	// set local storage to state
+	useEffect(() => {
+		localStorage.setItem('search-results', JSON.stringify(infoFromSearch));
+	}, [infoFromSearch]);
 
 	useEffect(() => {
 		setShowArticle(true);

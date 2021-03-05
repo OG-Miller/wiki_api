@@ -1,9 +1,9 @@
 .article__wrapper {
-  background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.447), rgba(192, 239, 247, 0.783));
+  background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.256), rgba(192, 239, 247, 0.783));
   border-radius: 8px;
   padding: 30px;
   padding-top: 20px;
-  margin-bottom: 30px;
+  margin: 0 5vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

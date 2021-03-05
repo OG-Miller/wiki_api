@@ -1,5 +1,5 @@
 .searchResultItem {
-  background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.447), rgba(192, 239, 247, 0.783));
+  background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.256), rgba(192, 239, 247, 0.783));
   overflow: hidden;
   padding: 10px;
   justify-self: center;
