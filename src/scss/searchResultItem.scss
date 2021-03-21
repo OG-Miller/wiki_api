@@ -1,15 +1,8 @@
 @import './helpers/layout';
 
 .searchResultItem {
-	@include glass;
-	overflow: hidden;
-	padding: 10px;
-	justify-self: center;
-	margin: 20px;
-	height: fit-content;
+	@include box;
 	cursor: pointer;
-	margin: 20px;
-	border-radius: 10px;
 	&:hover {
 		background: rgba(255, 255, 255, 0.452);
 	}
@@ -17,4 +10,5 @@
 
 h1 {
 	color: $deepBlue;
+	font-size: 22px;
 }

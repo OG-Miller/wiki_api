@@ -1,7 +1,7 @@
 //colours
-$gradient: linear-gradient(to right top, #84a0d0, #6cdbeb);
+$gradient: linear-gradient(to right top, #dcdfe4, #bddade);
 $glass: linear-gradient(to right bottom, rgba(239, 243, 244, 0.256), rgba(192, 239, 247, 0.783));
-$deepBlue: rgb(30, 107, 134);
+$deepBlue: rgb(19, 71, 90);
 $darkGrey: rgb(40, 40, 40);
 
 //details
@@ -16,4 +16,32 @@ $boxShadow: 1px 1px 10px 0px #84f4fc6d;
 
 @mixin glass {
 	background: $glass;
+}
+
+@mixin box {
+	@include glass;
+	overflow: hidden;
+	padding: 5px;
+	justify-self: center;
+	height: fit-content;
+	margin: 20px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+@mixin button {
+	all: unset;
+	height: 20px;
+	color: $darkGrey;
+	padding: 2px 5px;
+	margin-left: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	background-color: rgb(255, 254, 254);
+	border-radius: 2px;
+	border: 1px solid grey;
+	&:hover {
+		background-color: rgb(197, 196, 196);
+	}
+	cursor: pointer;
 }

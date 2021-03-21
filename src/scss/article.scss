@@ -1,13 +1,18 @@
 @import './helpers/layout';
 .article__wrapper {
-	@include glass;
-	// background: $glass;
-	border-radius: 8px;
+	@include box;
+
+	// border-radius: 8px;
 	padding: 30px;
-	padding-top: 20px;
-	margin: 0 05vw;
-	width: fit-content;
-	max-width: 800px;
+	margin-bottom: 30px;
+	// padding-top: 20px;
+	// margin-top: 0px;
+	// // margin: 5000px 05vw;
+	// width: fit-content;
+	// max-width: 800px;
+	// // height: fit-content;
+	// max-height: 500px;
+	// overflow: unset;
 }
 
 .title {
@@ -19,13 +24,13 @@
 .extract {
 	color: $deepBlue;
 	word-wrap: break-word;
-	overflow: scroll;
-
+	overflow: auto;
+	// margin-bottom: 30px;
 	font-family: Arial, Helvetica, sans-serif;
 	column-count: 2;
 	column-gap: 25px;
 	text-align: left;
-	max-height: 500px;
+	max-height: 450px;
 	@media (max-width: 700px) {
 		column-count: 1;
 	}
