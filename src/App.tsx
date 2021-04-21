@@ -22,7 +22,7 @@ const App: React.FC = () => {
 	const [infoFromSearch, setInfoFromSearch] = useState<dataObj[]>([]);
 	const [infoFromPageData, setInfoFromPageData] = useState<pageDataObj>();
 	const [showArticle, setShowArticle] = useState<boolean>(false);
-	const [showSearchResults, setShowSearchResults] = useState<boolean>(true);
+	const [showSearchResults, setShowSearchResults] = useState<boolean>(false);
 	const [searchQuery, setSearchQuery] = useState('');
 
 	// check if previous data is in local storage then set state to that data
@@ -56,7 +56,8 @@ const App: React.FC = () => {
 	const handleHomeClick: (e: React.MouseEvent<HTMLButtonElement>) => void = e => {
 		setInfoFromSearch([]);
 		setInfoFromPageData(undefined);
-		// setShowArticle(false);
+		setShowArticle(false);
+		setShowSearchResults(false);
 	};
 
 	const handleSearch: (e: React.FormEvent<HTMLFormElement>) => void = e => {
@@ -79,7 +80,7 @@ const App: React.FC = () => {
 	const handleSearchResultClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, id: number) => {
 		e.stopPropagation();
 		getPageData(id);
-		setShowSearchResults(false);
+		// setShowSearchResults(false);
 		setShowArticle(true);
 	};
 
@@ -98,22 +99,26 @@ const App: React.FC = () => {
 					<button className='searchBar__button'>search</button>
 				</form>
 			</div>
-			<div className='data'>
-				{showSearchResults === true && infoFromSearch
-					? infoFromSearch.map(item => (
-							<div
-								key={item.pageid}
-								onClick={(e: React.MouseEvent<HTMLDivElement>) =>
-									handleSearchResultClick(e, item.pageid)
-								}>
-								<SearchResultItem pageid={item.pageid} title={item.title} />
-							</div>
-					  ))
-					: null}
-				{infoFromPageData && showArticle ? (
-					<Article title={infoFromPageData.title} extract={infoFromPageData.extract} />
-				) : null}
-			</div>
+			{showSearchResults && (
+				<div className='searchResult_holder'>
+					{infoFromSearch.map(item => (
+						<div
+							key={item.pageid}
+							onClick={(e: React.MouseEvent<HTMLDivElement>) =>
+								handleSearchResultClick(e, item.pageid)
+							}>
+							<SearchResultItem pageid={item.pageid} title={item.title} />
+						</div>
+					))}
+				</div>
+			)}
+			{showArticle && (
+				<div className='article_holder'>
+					{showArticle && infoFromPageData ? (
+						<Article title={infoFromPageData.title} extract={infoFromPageData.extract} />
+					) : null}
+				</div>
+			)}
 		</div>
 	);
 };

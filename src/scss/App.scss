@@ -10,26 +10,32 @@ html {
 }
 
 .App {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	height: 100vh;
-	padding: 60px;
-	padding-top: 0px;
+	@include glass;
+	@include grid;
 	width: 100vw;
-	background: $gradient;
+	height: 100vh;
+	// display: flex;
+	// flex-direction: column;
+	// text-align: center;
+	// height: 100vh;
+	// padding: 60px;
+	// padding-top: 0px;
+	// width: 100vw;
+	// background: $gradient;
 }
 
 .searchBar__wrapper {
-	@include centerAll;
+	grid-column: span 2;
+	// @include centerAll;
 	flex-direction: row;
-	justify-self: flex-start;
-	align-self: center;
+	// justify-self: flex-start;
+	// align-self: center;
 	display: flex;
-	padding: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid rgb(97, 97, 97);
-	margin-bottom: 20px;
+	// padding: 10px;
+	padding-bottom: 35px;
+
+	border: 1px solid rgb(97, 97, 97);
+	// margin-bottom: 20px;
 	height: 80px;
 }
 
@@ -60,15 +66,22 @@ html {
 	// width: 40px;
 	// height: 20px;
 	// padding-right: 10px;
+	margin-left: 20px;
 	margin-top: 48px;
 }
 
-.data {
-	@include centerAll();
-	justify-self: center;
-	margin: 0px 20vw;
-	padding-bottom: 20px;
+.searchResult_holder {
+	grid-column: span 1;
+	// @include centerAll();
+	// justify-self: center;
+	// margin: 0px 20vw;
+	// padding-bottom: 20px;
+	border: 1px solid rgb(97, 97, 97);
 	// height: 500px;
 	// margin-top: 20px;
 	// margin-bottom: 20px;
+}
+
+.article_holder {
+	border: 1px solid rgb(97, 97, 97);
 }

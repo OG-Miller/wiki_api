@@ -21,10 +21,11 @@ $boxShadow: 1px 1px 10px 0px #84f4fc6d;
 @mixin box {
 	@include glass;
 	overflow: hidden;
-	padding: 5px;
+	padding: 15px;
 	justify-self: center;
 	height: fit-content;
-	margin: 20px;
+	// width: 20vw;
+	margin: 10px;
 	border: 1px solid grey;
 	border-radius: 5px;
 }
@@ -44,4 +45,14 @@ $boxShadow: 1px 1px 10px 0px #84f4fc6d;
 		background-color: rgb(197, 196, 196);
 	}
 	cursor: pointer;
+}
+
+@mixin grid {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: 1fr 5fr;
+	grid-template-rows: 1fr 5fr;
+	// grid-template-areas:
+	// 	'searchBar_wrapper searchBar_wrapper'
+	// 	'article_holder searchResult_holder';
 }

@@ -1,15 +1,15 @@
 .searchResultItem {
   background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.256), rgba(192, 239, 247, 0.783));
   overflow: hidden;
-  padding: 10px;
+  padding: 15px;
   justify-self: center;
-  margin: 20px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
   cursor: pointer;
-  margin: 20px;
-  border-radius: 10px;
 }
 .searchResultItem:hover {
   background: rgba(255, 255, 255, 0.452);
@@ -17,4 +17,5 @@
 
 h1 {
   color: #13475a;
+  font-size: 22px;
 }/*# sourceMappingURL=searchResultItem.css.map */

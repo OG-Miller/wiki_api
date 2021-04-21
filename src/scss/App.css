@@ -7,24 +7,22 @@ html {
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 100vh;
+  background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.256), rgba(192, 239, 247, 0.783));
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
   width: 100vw;
-  background: linear-gradient(to right top, #84a0d0, #6cdbeb);
+  height: 100vh;
 }
 
 .searchBar__wrapper {
+  grid-column: span 2;
+  flex-direction: row;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  justify-self: flex-start;
-  align-self: center;
-  display: flex;
-  padding: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 35px;
+  border: 1px solid #616161;
+  height: 80px;
 }
 
 .searchBar {
@@ -35,41 +33,55 @@ html {
   margin: 50px;
   display: flex;
   flex-direction: row;
-  background-color: white;
   border-radius: 3px;
 }
 .searchBar input {
-  border: none;
-  border-radius: 0;
+  border: 1px solid grey;
+  border-radius: 2px;
+  height: 22px;
 }
 
-.searchBar__button, .home__button {
+.searchBar__button {
   all: unset;
+  height: 20px;
   color: #282828;
   padding: 2px 5px;
-  margin-left: 10px;
+  margin-left: 5px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
   background-color: #fffefe;
   border-radius: 2px;
+  border: 1px solid grey;
   cursor: pointer;
 }
-.searchBar__button:hover, .home__button:hover {
+.searchBar__button:hover {
   background-color: #c5c4c4;
 }
 
 .home__button {
-  justify-self: center;
-  margin-right: 10px;
-  width: 40px;
-  padding-right: 10px;
+  all: unset;
+  height: 20px;
+  color: #282828;
+  padding: 2px 5px;
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  background-color: #fffefe;
+  border-radius: 2px;
+  border: 1px solid grey;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 48px;
+}
+.home__button:hover {
+  background-color: #c5c4c4;
 }
 
-.data {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  justify-self: center;
-  margin: 0 20vw;
+.searchResult_holder {
+  grid-column: span 1;
+  border: 1px solid #616161;
+}
+
+.article_holder {
+  border: 1px solid #616161;
 }/*# sourceMappingURL=App.css.map */

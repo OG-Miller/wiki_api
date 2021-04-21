@@ -1,13 +1,16 @@
 .article__wrapper {
   background: linear-gradient(to right bottom, rgba(239, 243, 244, 0.256), rgba(192, 239, 247, 0.783));
-  border-radius: 8px;
+  overflow: hidden;
+  padding: 15px;
+  justify-self: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
   padding: 30px;
-  padding-top: 20px;
-  margin: 0 5vw;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 800px;
+  margin-bottom: 30px;
 }
 
 .title {
@@ -19,14 +22,14 @@
 .extract {
   color: #13475a;
   word-wrap: break-word;
-  overflow: scroll;
+  overflow: auto;
   font-family: Arial, Helvetica, sans-serif;
   -moz-column-count: 2;
        column-count: 2;
   -moz-column-gap: 25px;
        column-gap: 25px;
   text-align: left;
-  max-height: 500px;
+  max-height: 450px;
 }
 @media (max-width: 700px) {
   .extract {
